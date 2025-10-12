@@ -49,7 +49,7 @@
     return freq;
   }
   function addPercentageSign(x) {
-    return (x * 1).toFixed(2) + '%';
+    return (x * 1).toFixed(2) + '%'; //se non lo moltiplico per 1 non funziona il toFixed!
   }
 
   //function to render the frequency table
@@ -203,6 +203,7 @@
       const results = bruteForce(enc);
       candidatesWrap.innerHTML = '';
       results.forEach((r) => {
+        // create a card for each result
         const card = document.createElement('div');
         card.className = 'card';
         card.style.marginBottom = '.5rem';
@@ -240,7 +241,7 @@
           }
         },
         { once: true }
-      ); // attach once per generation
+      );
     });
 
     //autodecode button
@@ -255,7 +256,7 @@
       const best = autoDecodeByFrequency(inputText);
       document.getElementById('cc_output').value = best.text;
       document.getElementById('cc_status').textContent = `Best shift: ${
-        best.shift
+        best.shift //non funziona da fixare.......
       } (score: ${best.score.toFixed(2)})`;
     });
   });

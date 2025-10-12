@@ -1,4 +1,6 @@
-/* --- General Layout Tweaks --- */
+/* --- Forse da aggiornare i colori da verde a blu per rimanere in tema con il tema generale del sito... --- */
+
+/* --- Layout--- */
 body {
   scroll-behavior: smooth;
 }
@@ -16,7 +18,7 @@ section,
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* --- Typography --- */
+/* --- Typo --- */
 h2,
 h3,
 h4 {
