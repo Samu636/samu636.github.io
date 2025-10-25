@@ -67,24 +67,24 @@ To go back to your branch:
 git checkout <branch-name>
 ```
 
-## For This Repository
+## Example: Going Back to a Previous Commit
 
-Based on your current git history:
-- Current commit: `688faca` (Initial plan)
-- Previous commit: `98ad780` (zz)
+**Note**: The commit hashes below are examples. Use `git log --oneline` to find your actual commit hashes.
 
-### If you want to go back to commit "zz":
+Let's say you want to go back from a recent commit to an earlier one:
 
-**Option A: Hard reset (if you want to discard "Initial plan" commit)**
+**Option A: Hard reset (if you want to discard the recent commit)**
 ```bash
-git reset --hard 98ad780
-git push --force origin copilot/restore-previous-commit
+# Replace <previous-commit-hash> with your actual commit hash
+git reset --hard <previous-commit-hash>
+git push --force origin <branch-name>
 ```
 
 **Option B: Revert (safer for shared branches)**
 ```bash
-git revert 688faca
-git push origin copilot/restore-previous-commit
+# Replace <unwanted-commit-hash> with the commit you want to undo
+git revert <unwanted-commit-hash>
+git push origin <branch-name>
 ```
 
 ## Common Scenarios
