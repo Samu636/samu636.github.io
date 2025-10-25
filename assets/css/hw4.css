@@ -1,0 +1,144 @@
+label,
+input {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel {
+  background: linear-gradient(180deg, #219827, var(--panel));
+  border: 1px solid #0d311a;
+  box-shadow: 0 10px 30px rgba(3, 52, 5, 0.35);
+  border-radius: 16px;
+}
+.controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid #0d311a;
+}
+.single-control {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #0d311a;
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.control label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+input[type='number'],
+input[type='text'] {
+  width: 100%;
+  letter-spacing: 0.2px;
+  font-weight: 600;
+  padding: 8px 12px;
+}
+input[type='range'] {
+  width: 100%;
+}
+.single-control:last-child {
+  grid-column: 1 / -1;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+button {
+  appearance: none;
+  border: 1px solid #1c7014;
+  background: #0e361f;
+  color: var(--ink);
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.board {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #0d311a;
+  border-radius: 14px;
+  padding: 12px;
+}
+.board h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: #cffff0;
+}
+canvas {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  image-rendering: crisp-edges;
+}
+.legend {
+  display: flex;
+  gap: 14px;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.key {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background: var(--accent);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.swatch.green {
+  background: var(--accent-2);
+}
+.swatch.red {
+  background: var(--danger);
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+.stat {
+  background: rgba(8, 79, 38, 0.232);
+  border: 1px solid #0d311a;
+  border-radius: 10px;
+  padding: 10px;
+}
+.stat strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+.note {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+button.danger {
+  background: linear-gradient(180deg, #ff7b7b, #ff5858);
+  border-color: #ff4b4b;
+}
